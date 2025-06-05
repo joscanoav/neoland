@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="background-color:#f2f2f2; padding:1em;">
+        <h2>Sección genérica</h2>
+        <p>Este contenido está dentro de un <code>&lt;div&gt;</code> con estilo inline.</p>
+    </div>
+
+    <p>
+        Este es un párrafo normal, pero aquí tengo un
+        <span style="color:#e63946; font-weight:bold;">texto resaltado</span>
+        dentro de la misma línea.
+    </p>
+
+    <section id="servicios">
+        <h2>Servicios Disponibles</h2>
+        <p>Ofrecemos desarrollo web, diseño gráfico y mantenimiento de servidores.</p>
+    </section>
+
+    <article>
+        <h3>Cómo Empezar con HTML5</h3>
+        <p>En este artículo aprenderás los fundamentos para crear tu primera página web.</p>
+        <footer>Publicado el 05/06/2025 por DevAna.</footer>
+    </article>
+
+    <section id="demo-audio">
+        <h2>Demo de Audio</h2>
+        <audio controls style="width:100%; max-width:400px;">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Tu navegador no soporta la etiqueta <code>&lt;audio&gt;</code>.
+            <!-- Mensaje alternativo si el navegador no admite la etiqueta <audio>. -->
+        </audio>
+        <p><em>Pruébalo: haz clic en reproducir para escuchar el audio de muestra.</em></p>
+    </section>
+
+    <section id="demo-video" style="margin-top:2em;">
+        <h2>Demo de Video</h2>
+        <video controls width="100%" style="max-width:500px;"
+            poster="https://via.placeholder.com/500x280.png?text=Mira+el+video">
+            <source src="https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta <code>&lt;video&gt;</code>.
+        </video>
+        <p><em>Video de muestra “Big Buck Bunny”. Haz clic en reproducir.</em></p>
+    </section>
+
+    <!-- Sección para el demo de audio con reproducción automática y silenciado -->
+    <section id="demo-audio">
+        <h2>Demo de Audio (Autoplay)</h2>
+        <!-- autoplay: inicia automáticamente
+       muted: permite que los navegadores lo reproduzcan automáticamente -->
+        <audio controls autoplay muted style="width:100%; max-width:400px;">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Tu navegador no soporta la etiqueta <code>&lt;audio&gt;</code>.
+        </audio>
+        <p><em>Este audio se reproduce automáticamente (en silencio).</em></p>
+    </section>
+
+    <audio controls>
+    <source src="rock.mp3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
+
+    <!-- Sección para el demo de video con reproducción automática y silenciado -->
+    <section id="demo-video" style="margin-top:2em;">
+        <h2>Demo de Video (Autoplay)</h2>
+        <!-- autoplay: inicia automáticamente
+       muted: requerido para que funcione el autoplay en la mayoría de navegadores -->
+        <video controls autoplay muted width="100%" style="max-width:500px;"
+            poster="https://via.placeholder.com/500x280.png?text=Mira+el+video">
+            <source src="https://www.sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta <code>&lt;video&gt;</code>.
+        </video>
+        <p><em>Este video se reproduce automáticamente (en silencio).</em></p>
+  
+   <video width="640" height="360" controls>
+    <source src="oso.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+  </video>
+
+
+    </section>
+
+    <section id="demo-iframe" style="margin-top:2em;">
+        <h2>Video de YouTube Embebido</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BtwJipmatzk?si=BAvXCfYFWy1XQ6bf"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p><em>Ejemplo de video de YouTube insertado con <code>&lt;iframe&gt;</code>.</em></p>
+    </section>
+<section>
+<audio autoplay>
+  <source src="rock.mp3" type="audio/mpeg">
+  <p>dasd</p>
+  Tu navegador no soporta la reproducción de audio.<code>&lt;video&gt;</code>
+</audio>
+</section>
+</body>
+
+</html>
