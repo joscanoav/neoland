@@ -1,0 +1,134 @@
+
+<!-- Indica al navegador que este documento es HTML5 -->
+<!DOCTYPE html>
+
+<!-- Raíz del documento HTML, con atributo de idioma español -->
+<html lang="es">
+
+<head>
+    <!-- Configuración de codificación de caracteres (UTF-8 admite acentos y caracteres especiales) -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que el diseño sea adaptable a pantallas pequeñas (responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Formulario de Registro</title>
+
+    <!-- Vincula el archivo externo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Título principal de la página -->
+    <h1>Formulario de Registro</h1>
+
+    <!-- Subtítulo o descripción breve del formulario -->
+    <p>Por favor, complete este formulario con la información requerida</p>
+
+    <!-- Formulario HTML con método POST (envío de datos) y destino (action) a una URL externa -->
+    <form action="https://register-demo.freecodecamp.org" method="post">
+
+        <!-- Grupo de campos relacionados: Datos personales -->
+        <fieldset>
+            <!-- Campo de texto para el nombre -->
+            <label for="first-name">
+                Ingrese su Nombre:
+                <input id="first-name" type="text" required name="first-name">
+                <!-- 'required' obliga a completar el campo -->
+            </label>
+
+            <!-- Campo de texto para el apellido -->
+            <label for="last-name">
+                Ingrese su Apellido:
+                <input id="last-name" type="text" required name="last-name">
+            </label>
+
+            <!-- Campo para introducir un correo electrónico -->
+            <label for="email">
+                Ingrese su Correo Electrónico:
+                <input id="email" type="email" required name="email">
+                <!-- 'type="email"' valida que el formato sea de correo -->
+            </label>
+
+            <!-- Campo para introducir una contraseña nueva -->
+            <label for="new-password">
+                Cree una Nueva Contraseña:
+                <inputid="new-password"
+                    type="password"
+                    pattern="[a-z0-5]{8,}"
+                    required
+                    name="password">
+                <!-- 'pattern' valida que tenga al menos 8 caracteres entre a-z y 0-5 -->
+            </label>
+        </fieldset>
+
+        <!-- Segundo grupo: tipo de cuenta y aceptación de condiciones -->
+        <fieldset>
+            <!-- Radio button para cuenta personal -->
+            <label for="personal-account">
+                <input type="radio" name="account-type" id="personal-account" class="inline">
+                Cuenta Personal
+            </label>
+
+            <!-- Radio button para cuenta empresarial -->
+            <label for="business-account">
+                <input type="radio" name="account-type" id="business-account" class="inline">
+                Cuenta Empresarial
+            </label>
+
+            <!-- Casilla de verificación para aceptar términos -->
+            <label for="terms-and-conditions">
+                <input type="checkbox" id="terms-and-conditions" name="terms" class="inline">
+                Acepto los
+                <a href="https://www.freecodecamp.org/news/terms-of-service/" target="_blank">
+                    términos y condiciones
+                </a>
+                <!-- Enlace a los términos, se recomienda usar target="_blank" -->
+            </label>
+        </fieldset>
+
+        <!-- Tercer grupo: información adicional -->
+        <fieldset>
+            <!-- Subir archivo de imagen (foto de perfil) -->
+            <label for="profile-picture">
+                <input type="file" id="profile-picture" name="file">
+                Subir una foto de perfil:
+            </label>
+
+            <!-- Edad del usuario, con valores entre 13 y 120 -->
+            <label for="age">
+                <input type="number" min="13" max="120" id="age" name="age">
+                Ingresa tu edad (años):
+            </label>
+
+            <!-- Lista desplegable con opciones de referencia -->
+            <label for="referrer">
+                ¿Cómo te enteraste de nosotros?
+                <select id="referrer" name="referrer">
+                    <option value="">(selecciona uno)</option>
+                    <option value="1">Noticias de freeCodeCamp</option>
+                    <option value="2">Canal de YouTube de freeCodeCamp</option>
+                    <option value="3">Foro de freeCodeCamp</option>
+                    <option value="4">Otro</option>
+                </select>
+            </label>
+
+            <!-- Área de texto para una breve biografía -->
+            <label for="bio">
+                Proporciona una biografía:
+                <textareaid="bio"
+                    rows="3"
+                    cols="30"
+                    placeholder="Me gusta programar en la playa ..."
+                    name="text">
+                </textarea>
+            </label>
+        </fieldset>
+
+        <!-- Botón para enviar el formulario -->
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+

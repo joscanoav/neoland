@@ -1,0 +1,123 @@
+/* Estilos globales del body (cuerpo del documento) */
+body {
+    width: 100%;                 /* Ocupa el ancho completo de la ventana */
+    height: 100vh;               /* Altura igual a la altura total de la ventana */
+    margin: 0;                   /* Elimina márgenes por defecto */
+    background-color: #1b1b32;   /* Fondo azul oscuro */
+    color: #f5f6f7;              /* Texto en gris muy claro */
+    font-family: Tahoma;         /* Fuente principal */
+    font-size: 16px;             /* Tamaño de fuente base */
+}
+
+/* ------------------- */
+/* 🏷️ Estilo de Labels */
+/* ------------------- */
+
+label {
+    display: block;      /* Hace que cada label ocupe su propia línea */
+    margin: 0.5rem 0;    /* Margen vertical entre etiquetas */
+}
+
+/* ------------------- */
+/* 📝 Títulos y Párrafos */
+/* ------------------- */
+
+h1, p {
+    margin: 1em auto;     /* Margen vertical y centrado horizontal */
+    text-align: center;   /* Centra el texto */
+}
+
+/* ------------------ */
+/* 🧾 Estilo del Form */
+/* ------------------ */
+
+form {
+    margin: 0 auto;         /* Centra el formulario horizontalmente */
+    max-width: 500px;       /* Ancho máximo permitido */
+    min-width: 300px;       /* Ancho mínimo permitido */
+    width: 60vw;            /* Ancho relativo (60% del ancho de la ventana) */
+    padding: 2em;           /* Espaciado interno */
+}
+
+/* ------------------------ */
+/* 📦 Estilos de Fieldsets */
+/* ------------------------ */
+
+fieldset {
+    border: 0;                   /* Elimina el borde por defecto */
+    padding: 2rem 0;             /* Espaciado vertical */
+    border-bottom: 3px solid #3b3b4f;  /* Línea divisoria entre secciones */
+}
+
+/* Evita línea final en el último fieldset */
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+/* Repetido por compatibilidad o refuerzo */
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* ----------------------------------- */
+/* 🧾 Inputs, Textarea y Select (Campos) */
+/* ----------------------------------- */
+
+input, textarea, select {
+    margin: 10px 0 0 0;   /* Espacio superior entre campos */
+    width: 100%;          /* Ancho completo del contenedor */
+    min-height: 2em;      /* Altura mínima para mejor accesibilidad */
+}
+
+/* ------------------------------ */
+/* ☑️ Estilo para inputs en línea */
+/* ------------------------------ */
+
+.inline {
+    width: unset;              /* Restaura ancho automático */
+    margin: 0 0.5em 0 0;       /* Espacio derecho entre elementos */
+    vertical-align: middle;    /* Alineación vertical centrada */
+}
+
+/* ------------------------------- */
+/* 🎨 Estilo visual de inputs y textarea */
+/* ------------------------------- */
+
+input, textarea {
+    background-color: #0a0a23;  /* Fondo oscuro (casi negro) */
+    border: 1px solid #0a0a23;  /* Borde igual al fondo (efecto plano) */
+    color: #ffffff;             /* Texto blanco */
+}
+
+/* ----------------------------- */
+/* 🔘 Estilo del botón de envío */
+/* ----------------------------- */
+
+input[type="submit"] {
+    display: block;            /* Ocupa su propia línea */
+    width: 60%;                /* Tamaño relativo del botón */
+    margin: 1em auto;          /* Centrado horizontal y espacio vertical */
+    height: 2em;               /* Altura definida */
+    font-size: 1.1rem;         /* Letra un poco más grande */
+    background-color: #3b3b4f; /* Color de fondo del botón */
+    border-color: white;       /* Color del borde */
+    min-width: 300px;          /* Tamaño mínimo para pantallas pequeñas */
+}
+
+/* ----------------------------- */
+/* 🖼️ Estilo del input de archivos */
+/* ----------------------------- */
+
+input[type="file"] {
+    padding: 1px 2px;  /* Pequeño relleno para mejor apariencia */
+}
+
+/* -------------------------- */
+/* 🔗 Estilo para los enlaces */
+/* -------------------------- */
+
+a {
+    color: #dfdfe2;  /* Color claro sobre fondo oscuro */
+}
+
