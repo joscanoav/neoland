@@ -1,0 +1,113 @@
+markdown
+CopiarEditar
+<!-- Estructura básica de un documento HTML5 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Hacer que la web sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <title>WebDevHub</title>
+</head>
+<body>
+    <main>
+        <!-- Título principal de la página -->
+        <h1>WebDevHub</h1>
+
+        <!-- Sección de recursos -->
+        <section>
+            <h2>Recursos para Programadores Web</h2>
+            <!-- Párrafo con un enlace externo a recursos para desarrolladores -->
+            <p>Descubre más <a target="_blank" href="https://developer.mozilla.org/es/">recursos</a> y tutoriales en nuestra galería</p>
+            <!-- Imagen que también es un enlace -->
+            <a target="_blank" href="https://developer.mozilla.org/es/">
+                <img src="webdev.jpg" alt="Desarrollador web trabajando en su laptop">
+            </a>
+        </section>
+
+        <!-- Sección de listas útiles -->
+        <section>
+            <h2>Listas Útiles para Programadores</h2>
+
+            <!-- Lista no ordenada de herramientas populares -->
+            <h3>Herramientas que los desarrolladores web aman:</h3>
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Git / GitHub</li>
+                <li>Chrome DevTools</li>
+            </ul>
+
+            <!-- Imagen con leyenda sobre VS Code -->
+            <figure>
+                <img src="vscode.jpg" alt="Pantalla de Visual Studio Code abierta con código">
+                <figcaption>Visual Studio Code: <em>Editor favorito</em> de muchos desarrolladores</figcaption>
+            </figure>
+
+            <!-- Lista ordenada de cosas que odian -->
+            <h3>Top 3 cosas que los desarrolladores web odian:</h3>
+            <ol>
+                <li>Bugs difíciles de reproducir</li>
+                <li>Dependencias sin documentación</li>
+                <li>Conflictos de merge en Git</li>
+            </ol>
+
+            <!-- Imagen ilustrativa sobre bugs -->
+            <figure>
+                <img src="bug.jpg" alt="Ilustración de un bug en código">
+                <figcaption>Los bugs que <strong>no se reproducen</strong> son los peores.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Sección con un formulario para los desarrolladores -->
+        <section>
+            <h2>Formulario de Desarrolladores</h2>
+            <!-- Formulario que envía los datos a una URL específica -->
+            <form action="https://webdevhub.com/submit-developer-info">
+
+                <!-- Selección de tipo de desarrollador -->
+                <fieldset>
+                    <legend>¿Eres desarrollador frontend o backend?</legend>
+                    <label>
+                        <input id="frontend" type="radio" name="tipo-developer" value="frontend">
+                        Frontend
+                    </label>
+                    <label>
+                        <input id="backend" type="radio" name="tipo-developer" value="backend">
+                        Backend
+                    </label>
+                </fieldset>
+
+                <!-- Selección múltiple de tecnologías preferidas -->
+                <fieldset>
+                    <legend>¿Qué tecnologías prefieres?</legend>
+                    <input id="javascript" type="checkbox" name="tecnologia" value="javascript" checked>
+                    <label for="javascript">JavaScript</label>
+
+                    <input id="python" type="checkbox" name="tecnologia" value="python">
+                    <label for="python">Python</label>
+
+                    <input id="php" type="checkbox" name="tecnologia" value="php">
+                    <label for="php">PHP</label>
+                </fieldset>
+
+                <!-- Campo de texto para ingresar portafolio -->
+                <input type="text" placeholder="URL de tu portafolio" required>
+
+                <!-- Botón para enviar el formulario -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página con enlace a freeCodeCamp -->
+    <footer>
+        <p>
+            Sin Copyright -
+            <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+        </p>
+    </footer>
+</body>
+</html>
+
