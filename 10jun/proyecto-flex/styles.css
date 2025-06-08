@@ -1,0 +1,84 @@
+/* Aplicar box-sizing global para evitar cálculos extras */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #2c3e50;
+}
+a {
+  text-decoration: none;
+}
+
+.nav-principal {
+  display: flex;
+  background-color: #34495e;
+  padding: 0.75rem 1.5rem;
+  align-items: center; /* alinea verticalmente los enlaces */
+}
+
+.nav-principal a {
+  color: white;
+  font-weight: bold;
+  margin-right: 1.5rem;
+}
+.nav-principal a:last-child {
+  margin-right: 0;
+}
+
+.nav-principal {
+  display: flex;
+  justify-content: space-between;
+  /* requiere que el primer y último enlace “encajen” en los bordes */
+}
+
+
+.nav-principal {
+  justify-content: center;
+}
+.nav-principal a {
+  margin: 0 1rem;
+}
+
+.contenedor-principal {
+  display: flex;
+  margin: 1rem auto;
+  max-width: 1200px;
+}
+
+.columna-main {
+  flex: 3; /* ocupa 3 fracciones */
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-right: 1rem;
+}
+.columna-sidebar {
+  flex: 1; /* ocupa 1 fracción */
+  background-color: #ecf0f1;
+  padding: 1rem;
+}
+
+.columna-main {
+  flex-grow: 3;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.columna-sidebar {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-wrap: wrap;
+}
+.columna-main,
+.columna-sidebar {
+  min-width: 300px; /* Evita que se encojan demasiado */
+}
+

@@ -1,0 +1,37 @@
+/* ✅ Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+/* ✅ Contenedor flex con wrap */
+.galeria-flex {
+  display: flex;
+  justify-content: space-around; /* espacio uniforme entre tarjetas */
+  flex-wrap: wrap; /* permite que pasen a la siguiente fila si no caben */
+}
+
+/* ✅ Tarjetas */
+.tarjeta {
+  width: 200px;
+  height: 150px;
+  background-color: #ecf0f1;
+  border: 1px solid #95a5a6;
+  margin: 0.5rem;
+
+  /* Centrado de contenido dentro de cada tarjeta */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2rem;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+/* Recomendado: usar border-box globalmente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.caja {
+  width: 300px;
+  padding: 20px;
+  border: 10px solid;
+  margin-bottom: 20px;
+  background-color: #ecf0f1;
+}
+
+/* Primera caja usa content-box (por defecto) */
+.content-box {
+  box-sizing: content-box;
+  border-color: #2c3e50;
+}
+
+/* Segunda caja usa border-box */
+.border-box {
+  box-sizing: border-box;
+  border-color: #c0392b;
+}

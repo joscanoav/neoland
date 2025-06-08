@@ -1,0 +1,35 @@
+/* ✅ Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+/* ✅ Contenedor con Flexbox */
+.nav-flex {
+  display: flex; /* convierte el nav en contenedor flex */
+  background-color: #2c3e50;
+  padding: 0.5rem 1rem;
+  align-items: center; /* centra verticalmente los elementos */
+
+}
+
+/* ✅ Estilos para los enlaces */
+.nav-flex a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+/* ✅ Quitar margen al último */
+.nav-flex a:last-child {
+  margin-right: 0;
+}
