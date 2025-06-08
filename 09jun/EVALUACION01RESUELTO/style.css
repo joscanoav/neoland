@@ -1,0 +1,191 @@
+/* Reseteamos márgenes y paddings para evitar espacios no deseados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border dentro del ancho y alto */
+}
+
+/* Estilo del body: altura completa de la ventana y grid para layout */
+body {
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: grid; /* Usamos grid para organizar las áreas */
+    grid-template-columns: 1fr; /* Una sola columna */
+    /* Definimos filas para header, nav, main y footer */
+    grid-template-rows: 100px 50px 1fr 60px;
+    /* Asignamos nombres a las áreas para luego usarlas */
+    grid-template-areas:
+        "zh"   /* header */
+        "zn"   /* nav */
+        "zm"   /* main */
+        "zf";  /* footer */
+}
+
+/* Estilo del header */
+header {
+    grid-area: zh; /* Área del grid para el header */
+    background-color: rgb(82, 79, 76); /* Color oscuro */
+    color: white; /* Texto blanco */
+    font-size: 20px; /* Tamaño de texto */
+    display: flex; /* Flexbox para distribución interna */
+    justify-content: space-between; /* Espacio entre elementos */
+    text-align: center; /* Texto centrado en los elementos */
+}
+
+/* Logo dentro del header */
+#logo {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Texto "Evaluacion Nº1" dentro del header */
+#evaluacion {
+    margin-right: 50%; /* Margen derecho para separación */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Imagen del logo */
+header > div > img {
+    max-height: 80px; /* Tamaño máximo alto */
+    padding: 10px; /* Espacio interno */
+    margin-left: 10px; /* Margen izquierdo */
+}
+
+/* Estilo del nav */
+nav {
+    grid-area: zn; /* Área del grid para nav */
+    background-color: rgb(117, 112, 105); /* Color gris */
+    color: white; /* Texto blanco */
+    display: flex; /* Flexbox */
+    align-content: center; /* Centrar contenido verticalmente */
+    justify-content: space-between; /* Espacio entre elementos */
+    padding: 10px; /* Espacio interno */
+}
+
+/* Cada div dentro de nav */
+nav > div {
+    font-size: 20px; /* Tamaño de texto */
+}
+
+/* Hover para los enlaces del nav */
+nav > div:hover {
+    color: yellow; /* Cambia a amarillo al pasar el cursor */
+}
+
+/* Estilo del main (antes section) */
+main {
+    grid-area: zm; /* Área del grid para main */
+    background-color: rgb(168, 162, 154); /* Color claro */
+    color: black; /* Texto negro */
+    display: flex; /* Flexbox para los div hijos */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    gap: 16px; /* Espacio entre los elementos */
+}
+
+/* Estilo de los div con clase texto dentro del main */
+main > .texto {
+    width: 98%; /* Ancho casi completo */
+    height: 200px; /* Alto fijo */
+    background-color: white; /* Fondo blanco */
+    border: 1px solid gray; /* Borde gris */
+    max-width: 350px; /* Ancho máximo para que no se agrande demasiado */
+    box-shadow: 5px 5px 5px black; /* Sombra para dar profundidad */
+    display: flex; /* Flexbox para centrar texto */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    color: black; /* Texto negro */
+    font-size: 20px; /* Tamaño del texto */
+    text-shadow: 1px 1px 2px black; /* Sombra de texto para mejor lectura */
+}
+
+/* Estilo del aside, inicialmente oculto */
+aside {
+    grid-area: za; /* Área del grid para aside */
+    display: none; /* No se muestra por defecto */
+    background-color: rgb(138, 135, 132); /* Color gris */
+    flex-wrap: wrap; /* Los hijos pueden ir a otra línea */
+    justify-content: center; /* Centrar horizontalmente */
+    align-content: space-around; /* Espacio alrededor vertical */
+    gap: 16px; /* Espacio entre elementos */
+    padding: 20px; /* Espacio interno */
+}
+
+/* Divs dentro del aside con clase anuncio */
+aside > .anuncio {
+    width: 300px; /* Ancho fijo */
+    height: 30%; /* Alto relativo */
+    margin-bottom: 3px; /* Separación abajo */
+    background-color: rgb(201, 191, 174); /* Color claro */
+    color: black; /* Texto negro */
+    border: 1px solid gray; /* Borde gris */
+    box-shadow: 5px 5px 5px black; /* Sombra */
+    display: flex; /* Flexbox para centrar texto */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    font-size: 30px; /* Texto más grande */
+    text-shadow: 1px 1px 2px black; /* Sombra de texto */
+}
+
+/* Estilo del footer */
+footer {
+    grid-area: zf; /* Área del grid para footer */
+    background-color: rgb(82, 79, 76); /* Color oscuro */
+    color: beige; /* Texto color beige */
+    font-size: 20px; /* Tamaño de texto */
+    display: flex; /* Flexbox */
+    flex-wrap: wrap; /* Permite que hijos pasen a otra línea */
+    justify-content: space-between; /* Espacio entre hijos */
+    align-items: center; /* Centrado vertical */
+    padding: 10px; /* Espacio interno */
+}
+
+/* Media query para pantallas mayores a 600px */
+@media screen and (min-width: 600px) {
+    main {
+        padding: 25px; /* Espacio extra dentro de main */
+        gap: 30px; /* Espacio mayor entre elementos */
+    }
+    main > .texto {
+        width: 48%; /* Los div ocupan casi la mitad del contenedor */
+    }
+}
+
+/* Media query para pantallas mayores a 1000px */
+@media screen and (min-width: 1000px) {
+    main {
+        justify-content: space-around; /* Distribución con espacio entre elementos */
+        align-items: center; /* Centrado vertical */
+        gap: 25px; /* Espacio entre elementos */
+    }
+    main > .texto {
+        width: 30%; /* Ancho reducido para mostrar más elementos en línea */
+        height: 300px; /* Alto aumentado */
+    }
+}
+
+/* Media query para pantallas muy grandes (1400px) */
+@media screen and (min-width: 1400px) {
+    body {
+        /* Cambiamos layout para agregar aside a la derecha */
+        grid-template-columns: 1fr 20%; /* Dos columnas: contenido principal + aside */
+        grid-template-rows: 40px 40px 1fr 50px; /* Altura de filas ajustadas */
+        grid-template-areas:
+            "zh zh"
+            "zn zn"
+            "zm za"
+            "zf zf";
+    }
+
+    /* Reducimos tamaño del logo en pantallas grandes */
+    header > div > img {
+        max-height: 30px;
+        padding: 5px;
+    }
+
+    /* Mostramos aside en pantallas grandes */
+    aside {
+        display: flex;
+    }
+}

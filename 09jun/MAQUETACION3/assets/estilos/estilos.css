@@ -1,0 +1,58 @@
+/* Eliminar márgenes y paddings por defecto (opcional pero recomendable) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos del cuerpo del documento */
+body {
+    height: 100vh; /* Ocupa el 100% del alto de la ventana del navegador */
+    display: grid; /* Convierte el body en una cuadrícula */
+    
+    /* Define una sola columna que ocupa todo el ancho */
+    grid-template-columns: 1fr;
+
+    /* Define 4 filas:
+       - 50px de alto para el header
+       - 1fr para la sección principal (ocupa el espacio restante)
+       - 50px para el nav
+       - 50px para el footer
+    */
+    grid-template-rows: 50px 1fr 50px 50px;
+
+    /* Nombres personalizados para cada área de la cuadrícula */
+    grid-template-areas: 
+        "zheader"
+        "znav"
+        "zsection"
+        "zfooter";
+}
+
+/* Estilos para el header */
+header {
+    grid-area: zheader; /* Se asigna al área llamada 'zheader' */
+    background-color: black; /* Fondo negro */
+    color: aqua; /* Texto color aqua */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    grid-area: znav; /* Se asigna al área 'znav' */
+    background-color: greenyellow; /* Fondo verde limón */
+    color: black; /* Texto negro */
+}
+
+/* Estilos para la sección principal */
+section {
+    grid-area: zsection; /* Se asigna al área 'zsection' */
+    background-color: blueviolet; /* Fondo violeta azulado */
+    color: white; /* Texto blanco */
+}
+
+/* Estilos para el pie de página */
+footer {
+    grid-area: zfooter; /* Se asigna al área 'zfooter' */
+    background-color: brown; /* Fondo marrón */
+    color: beige; /* Texto color beige */
+}

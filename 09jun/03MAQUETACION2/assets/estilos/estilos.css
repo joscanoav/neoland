@@ -1,0 +1,57 @@
+/* Aplicamos Grid al body */
+body {
+  height: 100vh; /* ocupa toda la altura de la ventana */
+  display: grid;
+  grid-template-columns: 25% 1fr; /* nav + contenido */
+  grid-template-rows: 10% 1fr 10%; /* header, main, footer */
+  grid-template-areas:
+    "header  header"
+    "nav     main"
+    "footer  footer";
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Asignamos cada área a su zona */
+header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  /*text-align: center;*/
+}
+
+nav {
+  grid-area: nav;
+  background-color: #f0f0f0;
+  padding: 15px;
+}
+
+main {
+  grid-area: main;
+  padding: 15px;
+  background-color: #fff;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Extra: reset básico */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #007acc;
+}
