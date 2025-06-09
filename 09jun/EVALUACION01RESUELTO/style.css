@@ -57,7 +57,8 @@ nav {
     background-color: rgb(117, 112, 105); /* Color gris */
     color: white; /* Texto blanco */
     display: flex; /* Flexbox */
-    align-content: center; /* Centrar contenido verticalmente */
+    /*align-content: center; /* Centrar contenido verticalmente */
+    align-items: center;
     justify-content: space-between; /* Espacio entre elementos */
     padding: 10px; /* Espacio interno */
 }
