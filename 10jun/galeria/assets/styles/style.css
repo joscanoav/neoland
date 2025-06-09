@@ -92,7 +92,7 @@ nav li + li {
   width: 100%;                      /* Ancho completo del contenedor .thumb */
   height: 100%;                     /* Alto completo del contenedor .thumb */
   object-fit: contain;              /* Escala la imagen para verla entera */
-  object-position: center;          /* Centra la imagen dentro del contenedor */
+  object-position: center;          /* Centra la imagen dentro del contenedor / escalable */
 }
 
 /* para portada (imagen full-width) */
