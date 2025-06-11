@@ -73,7 +73,7 @@ nav > div:hover {
     color: yellow; /* Cambia a amarillo al pasar el cursor */
 }
 
-/* Estilo del main (antes section) */
+/* Estilo del main */
 main {
     grid-area: zm; /* Área del grid para main */
     background-color: rgb(168, 162, 154); /* Color claro */
@@ -156,7 +156,7 @@ footer {
 /* Media query para pantallas mayores a 1000px */
 @media screen and (min-width: 1000px) {
     main {
-        justify-content: space-around; /* Distribución con espacio entre elementos */
+        justify-content: spa    ce-around; /* Distribución con espacio entre elementos */
         align-items: center; /* Centrado vertical */
         gap: 25px; /* Espacio entre elementos */
     }
