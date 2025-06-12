@@ -1,0 +1,116 @@
+/* Aplica a todos los elementos (*) */
+* {
+    margin: 0;      /* Elimina el margen por defecto de todos los elementos */
+    padding: 0;     /* Elimina el relleno (padding) por defecto de todos los elementos */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: aquamarine;        /* Color de fondo de la página */
+    font-size: 14px;                     /* Tamaño base de la tipografía */
+    font-family: "Poppins", sans-serif;  /* Familia de fuentes, Poppins o sans-serif como fallback */
+}
+
+/* Contenedor principal centrado */
+.container {
+    width: 80%;           /* Ocupa el 80% del ancho del viewport */
+    margin: 50px auto;    /* Margen superior e inferior de 50px, y centrado horizontal */
+}
+
+/* Caja de contacto con fondo blanco y layout en flex */
+.contact-box {
+    background: #fff;     /* Fondo blanco */
+    display: flex;        /* Disposición en línea de sus hijos flexibles */
+}
+
+/* Lado izquierdo de la sección de contacto */
+.contact-left {
+    flex-basis: 60%;      /* Ocupa el 60% del espacio disponible en el .contact-box */
+    padding: 40px 60px;   /* Relleno interno: 40px arriba y abajo, 60px derecha e izquierda */
+}
+
+/* Lado derecho de la sección de contacto */
+.contact-right {
+    flex-basis: 40%;      /* Ocupa el 40% del espacio disponible en el .contact-box */
+    padding: 40px;        /* Relleno interno uniforme de 40px */
+    background: #1c00b5;  /* Fondo azul oscuro */
+    color: #fff;          /* Texto en blanco */
+}
+
+/* Estilo general para todos los títulos <h1> */
+h1 {
+    margin-bottom: 10px;  /* Separación inferior de 10px */
+}
+
+/* Párrafos dentro de .container */
+.container p {
+    margin-bottom: 40px;  /* Separación inferior de 40px */
+}
+
+/* Filas de inputs dispuestas en flex y espaciados */
+.input-row {
+    display: flex;                     /* Disposición en línea de los inputs */
+    justify-content: space-between;   /* Espacio igual entre los hijos */
+    margin-bottom: 20px;              /* Separación inferior de 20px */
+}
+
+/* Cada grupo de input dentro de .input-row */
+.input-row .input-group {
+    flex-basis: 45%;   /* Cada grupo ocupa el 45% del ancho de la fila */
+}
+
+/* Estilo genérico para todos los <input> */
+input {
+    width: 100%;                   /* Ancho completo de su contenedor */
+    border: none;                  /* Sin borde */
+    border-bottom: 1px solid #ccc; /* Línea inferior gris claro */
+    outline: none;                 /* Sin contorno al enfocar */
+    padding-bottom: 5px;           /* Relleno inferior de 5px */
+}
+
+/* Estilo para <textarea> */
+textarea {
+    width: 100%;                  /* Ancho completo de su contenedor */
+    border: 1px solid #ccc;       /* Borde gris claro */
+    outline: none;                /* Sin contorno al enfocar */
+    padding: 10px;                /* Relleno interno de 10px */
+    box-sizing: border-box;       /* Incluye el padding y borde en el ancho total */
+}
+
+/* Estilo para todas las etiquetas <label> */
+label {
+    margin-bottom: 6px;     /* Separación inferior de 6px */
+    display: block;         /* Se muestran como bloque para respetar márgenes */
+    color: #1c00b5;         /* Color púrpura oscuro para destacar la etiqueta */
+}
+
+/* Estilo para los botones */
+button {
+    background: #1c00b5;                            /* Fondo púrpura oscuro */
+    width: 100px;                                   /* Ancho fijo de 100px */
+    border: none;                                   /* Sin borde */
+    outline: none;                                  /* Sin contorno al enfocar */
+    color: #fff;                                    /* Texto en blanco */
+    height: 35px;                                   /* Altura fija de 35px */
+    border-radius: 30px;                            /* Bordes redondeados (píldora) */
+    margin-top: 20px;                               /* Separación superior de 20px */
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3); /* Sombra suave debajo del botón */
+    cursor: pointer;                                /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilo para los <h3> dentro de .contact-left */
+.contact-left h3 {
+    columns: #1c001c;     /* (Posible error tipográfico: “columns” no es propiedad válida para color) */
+    font-weight: 600;     /* Grosor de fuente seminegrita */
+    margin-bottom: 30px;  /* Separación inferior de 30px */
+}
+
+/* Primer <td> de cada fila de tabla */
+tr td:first-child {
+    padding-right: 20px;  /* Espacio a la derecha para separar columnas */
+}
+
+/* Todas las celdas <td> de las filas */
+tr td {
+    padding-top: 20px;    /* Espacio arriba de 20px para separar filas */
+}
